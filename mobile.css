@@ -1,0 +1,294 @@
+
+ul {
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+td{
+	padding: 0px;
+}
+
+a{
+	text-decoration: none;
+	color: black;
+}
+
+
+p{
+	margin: 0px;
+}
+
+button{
+	margin: 0px;
+	border: 0px;
+	padding: 0px;
+	background-color: #fff;
+
+}
+
+
+body {
+	background-color: #e5e5e5;
+	margin: 0;
+	position: relative;
+}
+
+
+header{
+	background-color: white;
+	height: 48px;
+	width: 100%;
+	position: relative;
+	top: 0;
+	min-width: 360px;
+
+}
+
+div.Google_services{
+	position: absolute;
+	left: 11px;
+	top: 11px;
+	height: 24px;
+	width: 24px;
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAV0lEQVRIx+3VQQ0AIAwEwWo5Jfg3VUwQQsM0WQHz6VV31+QKAAAAAAAAAOAwIMlK0i8FAADwE+DFAwC4CfCFAAAALLEhA7DE3igAwL+ASQEAAAAAAIxuAySZPrhcy+LMAAAAAElFTkSuQmCC);
+	background-size: contain;
+}
+
+div.home_mark{
+	width: 160px;
+	height: 40px;
+	margin: 0px auto;
+	background-image: url(https://ssl.gstatic.com/android/market_images/web/logo_m_play.png);
+	background-size: contain;
+}
+
+
+div.search{
+	height: 24px;
+	right: 11px;
+	top: 11px;
+	width: 24px;
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAABSElEQVRYw+3Z0Q2DIBAGYEdwhOafwBEcwREYwRG6gSN0BEfoCIzgCIxAX3hoiCeCgIc5k3syNffBHYLtrLVdy9EJQAACeDAgdAHoASgAKwADwHph3D3VZbiyAgC8iaSpMADm2wEABgA6InE/NIDXLQCXvLmQ/P9sDFUBgeQ3V1KjF4u7RyFeNQGaSEKdaPaZwOsqADe6e7V8ugwOZlAVBbil0uSoYQKxlQaoK6NGlFPS81IBa+qIHSD8xv6UBPhTPmcALCmDEg1w9e9P95gBMPnPLQUYdwB9BsAogIgeaLeEmm/ipyyjNV5kk2wlHruZK7yd/rZ8oIlekjkdKW21VajQoX5OQbD5rEJsUYIINh+23O90LCI74OLbOBrBCpCCYAeIRbAExCDYAs4iWAPOINgDAog2AASijRIiEOlNLH/yCUAAAhBAKH4d6lEJvw9suwAAAABJRU5ErkJggg==);
+	position: absolute;
+	background-size: contain;
+}
+
+
+.wrapper_with_footer{
+	position: relative;
+	height: 100%;
+}
+
+
+.action_bar{
+	height: auto;
+	font-size: 14px;
+	position: relative;
+	margin-top: 15px;
+	text-align: center;
+	width: auto;
+	overflow:hidden; 
+
+}
+.action_bar_inner{
+	height: auto;
+	overflow:hidden; 
+}
+
+@media (max-width: 510px){
+	.action_bar_inner{
+			width: 345px;
+			margin: 0 auto;
+	}
+}
+
+@media (min-width: 510px) {
+	.action_bar_inner{
+			width: 515px;
+			margin: 0 auto;
+			overflow: hidden;
+	}
+}
+
+.action_bar_inner >div{
+	background-color: #fff;
+	border: 1px solid rgba(0,0,0,0.17);
+	text-align: center;
+	line-height: 36px;
+	font-family: "Roboto",sans-serif;
+	font-size: 14px;
+	font-style: normal;
+	height: 36px;
+	width: 158px;
+	margin: 5px;
+}
+
+
+#a_bar_item_1 {
+	float: left;
+
+}
+
+#a_bar_item_2 {
+	float: left;
+}
+
+
+
+#a_bar_item_3 {
+	float: left;
+}
+
+
+div.body_contents{
+	width: auto;
+	overflow:hidden; 
+}
+
+div.cluster{
+	clear: both;
+	overflow:hidden; 
+	margin: 20px auto 0px auto;
+}	
+
+@media (min-width: 680px) {
+	div.cluster{
+		width: 100%;
+	}	
+}
+
+@media (max-width: 680px){
+	div.cluster{
+		width: 510px;
+	}	
+
+}
+
+@media (max-width: 510px){
+	div.cluster{
+		width: 340px;
+	}	
+}
+
+
+
+h1.cluster_heading{
+	position: relative;
+	font-family: Roboto, Arial, sans-serif;
+	font-size: 24px;
+	margin: 0px 5px;
+	color: #333;
+	text-align: left;
+	text-decoration: none;
+	width: 100%;
+	line-height: 28px;
+}
+
+@media (min-width: 680px) {
+	h1.cluster_heading{
+		width: 340px;
+	}
+}
+
+div.see_more{
+	background-color: rgb(26, 161, 225);
+	padding: 0px 13px;
+	height: 30px;
+	width: 42px;
+	position: absolute;
+	right: 0;
+	bottom: 12px;
+	text-align: center;
+	line-height: 30px;
+	border-radius: 2px;
+
+}
+
+a.see_more{
+	font-size: 13px;
+	color: rgb(255, 255, 255);
+}
+
+p.subtitle{
+	clear: both;
+	font-size: 14px;
+	color: #555;
+	padding-bottom: 4px;
+}
+
+.card{
+	position: relative;
+	height: 330px;
+	width: 160px;
+	margin: 5px;
+	float: left;
+	background: #fff;
+}
+
+img.cover {
+	width: 100%;
+}
+
+table.cover {
+	height: 245px;
+	width: 100%;
+	background-color: #f5f5f5;
+	position: relative;
+	border-spacing: 0px;
+}
+
+
+
+.cover_cell{
+	vertical-align: middle;
+}
+
+.card_list{
+	overflow: hidden;
+	max-height: 330px;
+}
+
+.description{
+	padding: 4px 10px 0px 10px;
+}
+
+.book_title{
+	font-size: 16px;
+}
+
+.description .subtitle{
+	font-size: 13px;
+	color: #aaa;
+	float: left;
+}
+
+.price a{
+	color: #1aa1e1;	
+	font-size: 13px;
+	position: absolute;
+	right: 5px;
+	bottom: 10px;
+}
+
+.footer {
+
+	color: #8d8d8d;
+	font-size: 13px;
+	font-family: "Roboto",Arial,sans-serif;
+	line-height: 1.4;
+	font-weight: 400;
+}
+
+.footer a{
+	color: #8d8d8d;
+}
+
+.footer_links{
+	padding: 28px 5px;
+}
+
+.footer_links > a{
+	margin-left: 15px;
+}
+
