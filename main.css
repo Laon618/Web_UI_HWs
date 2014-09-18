@@ -48,15 +48,25 @@ header{
 
 }
 
+@media 
+
 #home_mark{
 	width: 200px;
 	height: 42px;
+
 	padding: 9px 25px;
 }
 
 div.home_mark{
 	position: absolute;
+	margin-left: 10px;
+	margin-top: 10px;
 	left:0;
+	width: 200px;
+	height: 42px;
+	overflow: hidden;
+	background-image: url(http://aweebitirish.com/wp-content/uploads/2014/04/google-play-transparent-logo.png);
+	background-size: 200px 42px;
 }
 
 div.search{
@@ -180,6 +190,7 @@ div.Google_services{
 .wrapper_with_footer{
 	position: relative;
 	height: 100%;
+	min-height: 1200px;
 }
 
 .navi{
@@ -308,6 +319,7 @@ nav.navi_books .navi_arrow {
 	padding: 0px 14px;
 	text-align: center;
 	line-height: 48px;
+	position: relative;
 }
 
 
@@ -329,6 +341,37 @@ nav.navi_books .navi_arrow {
 	width: 48px;
 	z-index: 10;
 
+}
+
+#drop_down_box {
+	padding: 40px;
+	position: absolute;
+	margin-left: -10px;
+	z-index: 15;
+	background-color: white;
+	height: 492px;
+	padding: 6px 0px;
+	text-overflow: ellipsis;
+	border-color: rgb(51, 51, 51);
+	box-shadow: hsla(0, 0%, 0%, 0.4) 0px 2px 40px 0px;
+}
+#drop_down_box > ul{
+	vertical-align: top;
+	width: 200px;
+	position: relative;
+}
+#drop_down_box li{
+	height: 18px;
+	padding: 6px 14px;
+	position: relative;
+	font-size: 13px;
+	font-family: Roboto, Arial, sans-serif;
+	color: #333;
+	text-align: left;
+	line-height: 18px;
+}
+#drop_down_box li:hover{
+	background-color: #f1f1f1;
 }
 
 #a_bar_item_2 {
@@ -396,6 +439,7 @@ div.body_contents{
 	top: 80px;
 	left: 250px;
 	width: auto;
+
 }
 
 
@@ -429,6 +473,8 @@ div.see_more{
 	text-align: center;
 	line-height: 30px;
 	border-radius: 2px;
+	font-size: 13px;
+	color: rgb(255, 255, 255);
 
 }
 
@@ -438,8 +484,7 @@ div.see_more:hover{
 }
 
 a.see_more{
-	font-size: 13px;
-	color: rgb(255, 255, 255);
+
 }
 
 p.subtitle{
@@ -524,7 +569,9 @@ table.cover:hover .overlay{
 }
 
 .footer {
-
+	position: absolute;
+	left: 250px;
+	bottom: 50px;
 	color: #8d8d8d;
 	font-size: 13px;
 	font-family: "Roboto",Arial,sans-serif;
