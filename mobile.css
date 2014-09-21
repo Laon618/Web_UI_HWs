@@ -247,6 +247,7 @@ table.cover {
 .card_list{
 	overflow: hidden;
 	max-height: 330px;
+	width: 1000px;
 }
 
 .description{
