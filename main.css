@@ -297,7 +297,7 @@ nav.navi_books .navi_arrow {
 	background: #fff;
 	height: 48px;
 	font-size: 14px;
-	position: absolute;
+	position: relative;
 	top: 0;
 	width: 100%;
 	display: block;
@@ -435,9 +435,9 @@ nav.navi_books .navi_arrow {
 }
 
 div.body_contents{
-	position: absolute;
-	top: 80px;
-	left: 250px;
+	position: relative;
+	margin-top: 80px;
+	margin-left: 250px;
 	width: auto;
 
 }
@@ -569,9 +569,8 @@ table.cover:hover .overlay{
 }
 
 .footer {
-	position: absolute;
-	left: 250px;
-	bottom: 50px;
+	margin-left: 250px;
+	margin-bottom: 50px;
 	color: #8d8d8d;
 	font-size: 13px;
 	font-family: "Roboto",Arial,sans-serif;

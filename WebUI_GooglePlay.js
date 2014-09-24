@@ -49,10 +49,25 @@ function addSeeMoreEvent(){
 	}
 
 	function SeeMore(e){
-		e.target.parentNode.nextSibling.style.maxHeight="none"
-		var body_contents = document.querySelectorAll(".body_contents");
+		var cardList = e.target.parentNode.nextSibling
+		cardList.style.maxHeight="none"
+
+		var newBooks="";
+		newBooks+=makeBookElement(templates[0].card_template, getBookData());
+		cardList.insertAdjacentHTML('beforeend', newBooks);
 	}
 
+}
+
+
+function makeBookElement(template, BookList){
+	var result = "";
+	for(var i = 0; i < BookList.length; i++){
+		changed = template.replace("<%=book_link%>", BookList[i].bookLink).replace("<%=cover_img%>", BookList[i].coverImg).replace("<%=book_link%>", BookList[i].bookLink).replace("<%=book_title%>",BookList[i].bookTitle).replace("<%=author_link%>", BookList[i].authorLink).replace("<%=author%>",BookList[i].author).replace("<%=rate%>",BookList[i].rate).replace("<%=price%>", BookList[i].price);
+
+		result+=changed;
+	}
+	return result;
 }
 
 
@@ -73,16 +88,6 @@ function showCertainGenre(ev){
 		to_replace.innerHTML=replaceStr;
 	};
 
-	function makeBookElement(template, BookList){
-		var result = "";
-		for(var i = 0; i < BookList.length; i++){
-			changed = template.replace("<%=book_link%>", BookList[i].bookLink).replace("<%=cover_img%>", BookList[i].coverImg).replace("<%=book_link%>", BookList[i].bookLink).replace("<%=book_title%>",BookList[i].bookTitle).replace("<%=author_link%>", BookList[i].authorLink).replace("<%=author%>",BookList[i].author).replace("<%=rate%>",BookList[i].rate).replace("<%=price%>", BookList[i].price);
-
-			result+=changed;
-		}
-		return result;
-	}
-
 	function makeCluster(clusterTemplate, ClusterInfo, cardTemplate){
 		var result ="";
 		for(var i =0; i< ClusterInfo.length; i++){
@@ -92,21 +97,6 @@ function showCertainGenre(ev){
 		}
 		return result;
 	}	
-
-
-
-	function getBookData(){
-		var url ="http://localhost:8000/bookList.json"
-		var request = new XMLHttpRequest();
-		request.open("GET", url, false);
-		request.send(null);
-		var result;
-		if(request.readyState ===4 && request.status ===200){
-			result = request.responseText;
-			result = JSON.parse(result);
-		}
-		return result;
-	}
 
 	function getClusterInfo(){
 		var url ="http://localhost:8000/clusterInfo.json"
@@ -124,63 +114,18 @@ function showCertainGenre(ev){
 	addSeeMoreEvent();
 }
 
-/*
-	function showCertainGenre(ev){
-		alert(ev.target.nodeName);
-		if(ev.target.className==="cartoon"){change(ev);}
-		else if(ev.target.className==="history"){change(ev);}
-		
-		function change(e){
-			e.preventDefault();
-			var to_replace = document.getElementById("content_to_replace");
-			var replaceStr = "";
-			replaceStr=
-			"<div class='shelfTop'> 
-				<div class='shelfTitle'>
-					<a href='http://goo.gl/X6HAi9'></a>
-				</div> 
-				<div class='shelfSubtitle'>
-					<a href='http://goo.gl/X6HAi9'>되라아아아아아아아아아</a>
-				</div> 
-			</div>";
-			replaceStr+="<div class='shelfContent'><ul>";
-			replaceStr+=makeBookElement(templateLiContent,BookList);
-			replaceStr+="</ul></div>";
-			to_replace.innerHTML=replaceStr;
-		};
-
-	};
-
-	var elGenreDetailList=document.querySelector(".navigatorMenu_genreSubmenu ul");
-	elGenreDetailList.addEventListener('click', showCertainGenre ,false);
-
-	function seeMore(e){
-		var currentBooks = e.target.parentNode.parentNode.parentNode.parentNode.innerHTML;
-		var result="";
-
-		var appendBooks = makeBookElement(templateLiContent,BookList);
-
-		result+=currentBooks;
-
-		var to_replace = document.querySelector(".body_contents");
-		to_replace.innerHTML=result;
-
-		to_replace.querySelector(".shelfContent ul").insertAdjacentHTML('beforeend', appendBooks);
-
-
-
-
+function getBookData(){
+	var url ="http://localhost:8000/bookList.json"
+	var request = new XMLHttpRequest();
+	request.open("GET", url, false);
+	request.send(null);
+	var result;
+	if(request.readyState ===4 && request.status ===200){
+		result = request.responseText;
+		result = JSON.parse(result);
 	}
-	*/
+	return result;
+}
 
-
-
-	
-/*
-	var seeMoreButton=document.querySelector(".see_more");
-	seeMoreButton.addEventListener('click', function(e){
-		alert(e.target.nodeName);
-	},false);
-	*/
 
 
